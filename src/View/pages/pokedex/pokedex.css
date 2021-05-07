@@ -1,0 +1,17 @@
+#side-bar {
+  position: fixed;
+  left: -350px;
+  z-index: 25;
+  transition: ease-in;
+  transition-duration: 500ms;
+  width: 320px;
+  height: 100vh;
+}
+
+.active {
+  left: 0 !important;
+}
+.card {
+  width: 250px !important;
+  margin: 0 10px;
+}

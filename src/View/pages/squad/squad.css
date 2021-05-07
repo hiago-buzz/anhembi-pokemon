@@ -1,0 +1,24 @@
+.container-card-squad {
+  width: 100%;
+  /* max-height: 530px; */
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px 5px rgba(53, 53, 53, 0.219);
+}
+
+.container-pokemon {
+  width: 160px;
+  height: 160px;
+  box-shadow: 0px 5px 20px 5px rgba(53, 53, 53, 0.219);
+}
+.disabled-card {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.container-pokemon img {
+  width: 130px;
+}
+
+.img-select {
+  opacity: 0.9;
+}
