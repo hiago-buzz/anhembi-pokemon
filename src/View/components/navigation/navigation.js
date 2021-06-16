@@ -11,6 +11,8 @@ class Navigation {
       $(this).addClass("active");
       navigation.redirect(page);
     });
+
+    $("#btn-logout").on("click", this.logout);
   }
 
   removeClassnavActive = function () {
@@ -48,6 +50,17 @@ class Navigation {
 
   deletePageInSession = function () {
     sessionStorage.removeItem("currentPage");
+  };
+
+  logout = function () {
+    $.post("./src/api/logout.php", function (res) {
+      const obj = JSON.parse(res);
+
+      if (obj.success) {
+        sessionStorage.removeItem("token");
+        window.location = "login.php";
+      }
+    });
   };
 }
 

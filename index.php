@@ -2,8 +2,8 @@
   require_once 'properties.php';
   require_once __ROOT__.'/src/Helpers/Authentication.php';
 
-  // $auth = new Authentication();
-  // $auth->validateSession();
+  $auth = new Authentication();
+  $auth->validateSession();
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,7 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="src/assets/css/loading.css" />
   <link rel="stylesheet" href="src/assets/css/global.css" />
   <title>Anhembi Pokémon</title>
 </head>
@@ -37,10 +38,12 @@ body {
 </style>
 
 <body class="">
+  <div class="bg-loading">
+    <div class="lds-dual-ring"></div>
+  </div>
   <?php
     require_once __ROOT__.'/src/View/components/navigation/navigation.php';
     ?>
-
   <iframe id="root" src="src/View/pages/pokedex/pokedex.php" frameborder="0"></iframe>
 
   <script src="lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>

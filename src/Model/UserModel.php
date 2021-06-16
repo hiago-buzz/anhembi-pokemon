@@ -1,16 +1,16 @@
 <?php
 
 class User {
-  private $nick_name;
-  private $full_name;
-  private $gender;
-  private $email;
-  private $password;
-  private $birth_date;
-  private $bio;
-  private $create_in;
-  private $update_in;
-  private $status;
+  private $nick_name = NULL;
+  private $full_name = NULL;
+  private $gender = NULL;
+  private $email = NULL;
+  private $password = NULL;
+  private $birth_date = NULL;
+  private $bio = NULL;
+  private $create_in = NULL;
+  private $update_in = NULL;
+  private $status = NULL;
 
   public function setNickname($nick_name){
     $this->nick_name = $nick_name;

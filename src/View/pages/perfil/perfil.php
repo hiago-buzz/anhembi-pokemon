@@ -127,6 +127,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
               <div class="col-12 d-flex align-items-center justify-content-between mb-3">
                 <div class="col-3 p-0 ">
+                  <button id="btn-disabled" class="btn btn-danger text-white btn-block font-weight-bold mt-1"
+                    type="button"><i class="fas fa-times"></i> <span class="d-none d-md-inline">
+                      Desativar</span></button>
                 </div>
                 <div class="col-3 p-0">
                   <button id="btn-save" class="btn btn-success disabled text-white btn-block font-weight-bold mt-1"

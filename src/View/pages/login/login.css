@@ -1,7 +1,7 @@
 #background-login {
   height: 100vh;
   width: 100vw;
-  background-image: url("../../../../assets/img/fundos/LOGIN.png");
+  background-image: url("../../../assets/img/fundos/LOGIN.png");
   background-size: cover;
 }
 

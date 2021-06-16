@@ -1,11 +1,12 @@
 <?php
-require_once(__ROOT__.'/Model/UserModel.php');
-require_once(__ROOT__.'/Data/Connect.php');
+
+require_once '../Model/UserModel.php';
+require_once '../Data/Connect.php';
 
   class DAOUser{
     
     public function create(User $user){
-      $sql = "INSERT INTO user (
+      $sql = "INSERT INTO users (
         nick_name,
         full_name,
         gender,
@@ -40,6 +41,22 @@ require_once(__ROOT__.'/Data/Connect.php');
 
       return $p_sql->execute();
      
+    }
+
+    public function login($user){
+      $sql = "SELECT nick_name FROM users WHERE email = :email AND password = :password AND status = 1";
+
+      $connect = new Connect();
+      $p_sql = $connect->getInstance()->prepare($sql);
+
+      $p_sql->bindValue(":email", $user['email']);
+      $p_sql->bindValue(":password", md5($user['password']));
+      $p_sql->execute();
+      $response = $p_sql->fetchAll();
+      if(!empty($response)){
+        return $response[0]['nick_name'];
+      }
+      return NULL;
     }
   }
 ?>

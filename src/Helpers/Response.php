@@ -3,7 +3,7 @@
 class Response {
 
   public function success($message, $data){
-    echo '{"success": true, "message":'.$message.',"data":'.$data.'}';
+    echo '{"success": true, "message":"'.$message.'","data":"'.$data.'"}';
   }
 
   public function error($err){

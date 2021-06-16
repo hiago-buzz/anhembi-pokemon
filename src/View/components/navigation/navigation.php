@@ -1,3 +1,8 @@
+<?php
+  require_once __ROOT__.'/src/Helpers/Authentication.php';
+  $auth = new Authentication();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,8 +43,13 @@
         </div>
       </div>
       <div class="d-md-flex align-items-center justify-content-between">
-        <small class="text-white mx-md-4">Bem vindo, Fulano!</small>
-        <a href="login.php"><small class="text-white"><i class="fas fa-sign-out-alt"></i> sair</small></a>
+        <small class="text-white mx-md-4">Bem vindo, <strong>
+            <?php
+        echo ucfirst($auth->getNickname()) . "!";
+        ?>
+          </strong>
+        </small>
+        <a href="#" id="btn-logout"><small class="text-white"><i class="fas fa-sign-out-alt"></i> sair</small></a>
       </div>
     </div>
   </nav>

@@ -9,12 +9,16 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="src/View/pages/login/css/login.css" />
+  <link rel="stylesheet" href="src/View/pages/login/login.css" />
   <link rel="stylesheet" href="src/assets/css/global.css" />
+  <link rel="stylesheet" href="src/assets/css/loading.css" />
   <title>Login</title>
 </head>
 
 <body>
+  <div class="bg-loading">
+    <div class="lds-dual-ring"></div>
+  </div>
   <div class="container-fluid" id="background-login">
     <div class="container h-100 d-flex flex-column align-items-end justify-content-center bg-color-white">
       <div class="card-login">
@@ -37,13 +41,10 @@
             <input id="password" name="password" type="password" autocomplete="off" class="form-control"
               placeholder="Digite sua senha" />
           </div>
-          <small class="text-primary-color opacity-8">Esqueci a senha</small>
-          <a href="index.php">
-            <button id="btn-login" type="button"
-              class="btn btn-warning btn-block text-white font-weight-bold mt-4 mb-3">
-              Entrar
-            </button>
-          </a>
+          <!-- <small class="text-primary-color opacity-8">Esqueci a senha</small> -->
+          <button id="btn-login" type="button" class="btn btn-warning btn-block text-white font-weight-bold mt-4 mb-3">
+            Entrar
+          </button>
           <small class="text-primary-color mt-5 mb-1 opacity-8">
             Ainda não é um Treinador?
           </small>
@@ -59,6 +60,9 @@
   <script src="lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="src/assets/js/loading.js" type="text/javascript"></script>
+  <script src="src/assets/js/utils.js" type="text/javascript"></script>
+  <script src="src/View/pages/login/login.js"></script>
 </body>
 
 </html>

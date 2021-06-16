@@ -10,10 +10,14 @@
 
   <link rel="stylesheet" href="src/View/pages/create/create.css" />
   <link rel="stylesheet" href="src/assets/css/global.css" />
+  <link rel="stylesheet" href="src/assets/css/loading.css" />
   <title>Cadastrar</title>
 </head>
 
 <body>
+  <div class="bg-loading">
+    <div class="lds-dual-ring"></div>
+  </div>
   <div class="container-fluid" id="background-create">
     <div class="container h-100 d-flex align-items-center justify-content-center">
       <div class="card-create w-md-70">
@@ -32,8 +36,8 @@
                       <i class="fas fa-smile text-warning"></i>
                     </span>
                   </div>
-                  <input id="nick-name" name="nick-name" type="nick-name" autocomplete="off" class="form-control"
-                    placeholder="Apelido" />
+                  <input id="nick-name" name="nick-name" type="nick-name" autocomplete="off"
+                    class="form-control required" placeholder="Apelido" />
                 </div>
               </div>
 
@@ -44,8 +48,8 @@
                       <i class="fas fa-user text-warning"></i>
                     </span>
                   </div>
-                  <input id="full-name" name="full-name" type="full-name" autocomplete="off" class="form-control"
-                    placeholder="Nome Completo" />
+                  <input id="full-name" name="full-name" type="full-name" autocomplete="off"
+                    class="form-control required" placeholder="Nome Completo" />
                 </div>
               </div>
 
@@ -69,8 +73,9 @@
                       <!-- <i class="fas fa-venus-mars text-warning"></i> -->
                     </span>
                   </div>
-                  <select class="form-control" id="pokemon" name="pokemon" placeholder="Pokémon Favorito">
-                    <option default hidden>Selecione Pokémon Favorito</option>
+                  <select class="form-control required" id="pokemonFav" name="pokemonFav"
+                    placeholder="Pokémon Favorito">
+                    <option default hidden value="">Selecione Pokémon Favorito</option>
                   </select>
                 </div>
               </div>
@@ -82,7 +87,7 @@
                       <i class="fas fa-calendar text-warning"></i>
                     </span>
                   </div>
-                  <input id="birth-date" name="birth-date" type="date" class="form-control"
+                  <input id="birth-date" name="birth-date" type="date" class="form-control  required"
                     placeholder="Confirmar Senha" />
                 </div>
               </div>
@@ -94,8 +99,8 @@
                       <i class="fas fa-venus-mars text-warning"></i>
                     </span>
                   </div>
-                  <select class="form-control" id="gender" name="gender" placeholder="Gênero">
-                    <option default hidden>Selecione Gênero</option>
+                  <select class="form-control  required" id="gender" name="gender" placeholder="Gênero">
+                    <option default hidden value="">Selecione Gênero</option>
                     <option value="M">Masculino</option>
                     <option value="F">Feminino</option>
                     <option value="O">Outro</option>
@@ -134,7 +139,7 @@
                       <i class="fas fa-book-reader text-warning"></i>
                     </span>
                   </div>
-                  <textarea class="form-control" id="describe" name="describe" rows="4"
+                  <textarea class="form-control" id="bio" name="bio" rows="4"
                     placeholder="Breve descrição sobre o inicio da sua jornada"></textarea>
                 </div>
               </div>
@@ -157,6 +162,9 @@
     </div>
   </div>
   <script src="lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="src/assets/js/pokemon.js" type="text/javascript"></script>
+  <script src="src/assets/js/loading.js" type="text/javascript"></script>
+  <script src="src/assets/js/utils.js" type="text/javascript"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="src/View/pages/create/create.js"></script>
