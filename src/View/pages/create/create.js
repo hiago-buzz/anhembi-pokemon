@@ -63,6 +63,8 @@ class Create {
 
   create() {
     const payload = $("#formCreate").serializeObject();
+    payload.favorite = 1;
+    payload["pokemon_name"] = $("#pokemonFav option:selected").text();
 
     $.post("./src/api/create-user.php", payload, function (res) {
       const obj = JSON.parse(res);

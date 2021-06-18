@@ -22,3 +22,8 @@
 .img-select {
   opacity: 0.9;
 }
+
+.card {
+  width: 180px !important;
+  margin: 0 10px;
+}

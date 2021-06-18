@@ -16,13 +16,6 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div id="side-bar" class="col-12 col-md-3 bg-blue-grey-color">
-        <div class="d-flex w-100 justify-content-between align-items-center">
-          <h4 class="text-warning-color mx-3 my-5">Filtrar Pokémon</h4>
-          <h4 id="btn-close" class=" text-warning-color mx-3 my-5 cursor-pointer"><i class="fas fa-times"></i></h4>
-        </div>
-      </div>
-
       <div id="pokedex" class="container-fluid bg-light pb-5">
         <div class="row">
           <div class="container">

@@ -73,7 +73,7 @@
                       <!-- <i class="fas fa-venus-mars text-warning"></i> -->
                     </span>
                   </div>
-                  <select class="form-control required" id="pokemonFav" name="pokemonFav"
+                  <select class="form-control required" id="pokemonFav" name="pokemon_id"
                     placeholder="Pokémon Favorito">
                     <option default hidden value="">Selecione Pokémon Favorito</option>
                   </select>

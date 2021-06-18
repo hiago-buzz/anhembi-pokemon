@@ -17,8 +17,8 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="src/assets/css/loading.css" />
   <link rel="stylesheet" href="src/assets/css/global.css" />
+  <link rel="stylesheet" href="src/assets/css/loading.css" />
   <title>Anhembi Pokémon</title>
 </head>
 <style>
@@ -48,7 +48,7 @@ body {
 
   <script src="lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
+  <script src="src/assets/js/loading.js" type="text/javascript"></script>
   <script>
   changeHeight();
   $(document).on("change", function() {

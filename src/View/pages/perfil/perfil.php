@@ -29,7 +29,8 @@
               <div class="col-md-4">
                 <div class="d-flex justify-content-center mx-3 mb-2 align-items-center">
                   <div class="container-pokemon rounded-circle bg-warning cursor-pointer">
-                    <img class="img-fluid img-perfil" src="../../../assets/img/pokemons/1.svg" alt="">
+                    <img id="imgPokemon" class="img-fluid img-perfil" src="../../../assets/img/pokemons/silhueta.png"
+                      alt="">
                   </div>
                 </div>
               </div>
@@ -40,10 +41,8 @@
                       <i class="fas fa-book-reader text-warning"></i>
                     </span>
                   </div>
-                  <textarea disabled class="form-control" id="describe" name="describe" rows="4"
+                  <textarea disabled class="form-control" id="bio" name="bio" rows="4"
                     placeholder="Breve descrição sobre o inicio da sua jornada">
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-, when an unkno
                   </textarea>
                 </div>
               </div>
@@ -55,7 +54,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     </span>
                   </div>
                   <input disabled id="nick-name" name="nick-name" type="nick-name" autocomplete="off"
-                    class="form-control" placeholder="Apelido" value="Ashe" />
+                    class="form-control" placeholder="Apelido" readonly />
                 </div>
               </div>
 
@@ -67,7 +66,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     </span>
                   </div>
                   <input disabled id="full-name" name="full-name" type="full-name" autocomplete="off"
-                    class="form-control" placeholder="Nome Completo" value="Vanderlei da Silva Barbosa Queiroz" />
+                    class="form-control" placeholder="Nome Completo" />
                 </div>
               </div>
 
@@ -79,7 +78,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     </span>
                   </div>
                   <input disabled id="email" name="email" type="email" autocomplete="off" class="form-control " readonly
-                    placeholder="E-mail" value="valQueiroz@gmail.com" />
+                    placeholder="E-mail" />
                 </div>
               </div>
 
@@ -91,9 +90,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         alt="pokémon">
                     </span>
                   </div>
-                  <select disabled class="form-control" id="pokemon" name="pokemon" placeholder="Pokémon Favorito">
-                    <option default hidden>Bulbasaur</option>
-                  </select>
+                  <input disabled id="pokemon" name="pokemon" type="pokemon" autocomplete="off" class="form-control"
+                    placeholder="Pokemon Favorito" readonly />
                 </div>
               </div>
 
@@ -104,8 +102,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                       <i class="fas fa-calendar text-warning"></i>
                     </span>
                   </div>
-                  <input disabled id="birth-date" name="birth-date" type="date" class="form-control"
-                    value="1990-06-01" />
+                  <input disabled id="birth-date" name="birth-date" type="date" class="form-control" readonly />
                 </div>
               </div>
 
@@ -127,9 +124,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
               <div class="col-12 d-flex align-items-center justify-content-between mb-3">
                 <div class="col-3 p-0 ">
-                  <button id="btn-disabled" class="btn btn-danger text-white btn-block font-weight-bold mt-1"
+                  <button id="btn-delete" class="btn btn-danger text-white btn-block font-weight-bold mt-1"
                     type="button"><i class="fas fa-times"></i> <span class="d-none d-md-inline">
-                      Desativar</span></button>
+                      Excluir conta</span></button>
                 </div>
                 <div class="col-3 p-0">
                   <button id="btn-save" class="btn btn-success disabled text-white btn-block font-weight-bold mt-1"
@@ -142,10 +139,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       </div>
     </div>
   </div>
-
   <script src="../../../../lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="../../../../lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="../../../assets/js/utils.js" type="text/javascript"></script>
+  <script src="../../../assets/js/loading.js" type="text/javascript"></script>
   <script src="perfil.js"></script>
 </body>
 
